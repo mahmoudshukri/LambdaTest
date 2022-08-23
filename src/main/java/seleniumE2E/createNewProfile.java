@@ -37,7 +37,7 @@ public class createNewProfile extends BaseTest{
     Actions act = new Actions(driver);
     act.moveToElement(find(myAccountMenu)).perform();
         Thread.sleep(1000);
-    click(logOut);
+        click(logOut);
 
     }
     private WebElement find(By locator){
