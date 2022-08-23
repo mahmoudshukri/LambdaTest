@@ -1,2 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/mshukri/Downloads/Testing/AutomationProjects/LambdaTest"><classes><class name="seleniumE2E.AddToCart_Checkout"><methods><include name="test2AddToCart_Checkout"/></methods></class><class name="seleniumE2E.createNewProfile"><methods><include name="test1_createNewProfile"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cross Browser-Parallel Testing" parallel="methods" thread-count="2">
+    <test name ="Test On Chrome">
+     <parameter name="Browser" value="chrome"></parameter>
+        <parameter name="Version" value="103.0"></parameter>
+        <parameter name="Platform" value="Windows 10"></parameter>
+        <classes>
+            <class name="seleniumE2E.createNewProfile"/>
+            <class name="seleniumE2E.AddToCart_Checkout"/>
+        </classes>
+    </test>
+
+    <test name ="Test On Edge">
+        <parameter name="Browser" value="edge"></parameter>
+        <parameter name="Version" value="103.0"></parameter>
+        <parameter name="Platform" value="Windows 10"></parameter>
+        <classes>
+            <class name="seleniumE2E.createNewProfile"/>
+            <class name="seleniumE2E.AddToCart_Checkout"/>
+        </classes>
+    </test>
+
+    <test name ="Test On Firefox">
+        <parameter name="Browser" value="firefox"></parameter>
+        <parameter name="Version" value="103.0"></parameter>
+        <parameter name="Platform" value="Windows 10"></parameter>
+        <classes>
+            <class name="seleniumE2E.createNewProfile"/>
+            <class name="seleniumE2E.AddToCart_Checkout"/>
+        </classes>
+    </test>
+
+</suite>
