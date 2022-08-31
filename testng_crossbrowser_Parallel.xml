@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Cross Browser-Parallel Testing" parallel="methods" thread-count="2">
     <test name ="Test On Chrome">
-     <parameter name="Browser" value="chrome"></parameter>
-        <parameter name="Version" value="103.0"></parameter>
-        <parameter name="Platform" value="Windows 10"></parameter>
+     <parameter name="Browser" value="chrome"/>
+        <parameter name="Version" value="103.0"/>
+        <parameter name="Platform" value="Windows 10"/>
         <classes>
             <class name="seleniumE2E.createNewProfile"/>
             <class name="seleniumE2E.AddToCart_Checkout"/>
@@ -12,9 +12,9 @@
     </test>
 
     <test name ="Test On Edge">
-        <parameter name="Browser" value="edge"></parameter>
-        <parameter name="Version" value="103.0"></parameter>
-        <parameter name="Platform" value="Windows 10"></parameter>
+        <parameter name="Browser" value="edge"/>
+        <parameter name="Version" value="103.0"/>
+        <parameter name="Platform" value="Windows 10"/>
         <classes>
             <class name="seleniumE2E.createNewProfile"/>
             <class name="seleniumE2E.AddToCart_Checkout"/>
@@ -22,9 +22,9 @@
     </test>
 
     <test name ="Test On Firefox">
-        <parameter name="Browser" value="firefox"></parameter>
-        <parameter name="Version" value="103.0"></parameter>
-        <parameter name="Platform" value="Windows 10"></parameter>
+        <parameter name="Browser" value="firefox"/>
+        <parameter name="Version" value="103.0"/>
+        <parameter name="Platform" value="Windows 10"/>
         <classes>
             <class name="seleniumE2E.createNewProfile"/>
             <class name="seleniumE2E.AddToCart_Checkout"/>

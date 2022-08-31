@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -68,6 +69,7 @@ public class createNewProfile {
     type (confirmPassword,"3500success");
     click(agreeCheckbox);
     click(continueReg);
+
 //Hover on my account then click on logout
         Thread.sleep(1000);
     Actions act = new Actions(driver);
@@ -88,7 +90,10 @@ public class createNewProfile {
    private String generateRandomEmail(){
         return RandomStringUtils.random(4,true,true)+ "@gmail.com";
 }
-
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
+    }
 
 
 
